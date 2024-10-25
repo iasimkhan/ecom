@@ -36,6 +36,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./                       # Directory of the Laravel project
           server-dir: /  # Path to your server's root directory
+          exclude: |
+      vendor/
 
       # Step 6: Set Permissions for Laravel Folders
       - name: Set Permissions for Laravel Folders

@@ -31,14 +31,13 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-           server: ${{ env.FTP_SERVER }}
-          username: ${{ env.FTP_USERNAME }}
-          password: ${{ env.FTP_PASSWORD }}
-
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./                       # Directory of the Laravel project
           server-dir: /  # Path to your server's root directory
 
-      # Step 6: Set Permissions (optional)
+      # Step 6: Set Permissions for Laravel Folders
       - name: Set Permissions for Laravel Folders
         run: |
           chmod -R 775 storage

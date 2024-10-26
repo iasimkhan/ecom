@@ -9,7 +9,7 @@
                                 <div class="detail-box">
                                     <h1>
                                         Welcome To Our <br>
-                                        Asim
+                                        Growbiz 365
                                     </h1>
                                     <p>
                                         Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non

@@ -28,3 +28,14 @@ Route::get('view_category', [AdminController::class, 'view_category'])
 
 Route::post('add_category', [AdminController::class, 'add_category'])
     ->middleware(['auth', 'admin']);
+
+
+
+    Route::get('/clear-cache', function() {
+        Artisan::call('cache:clear');
+        Artisan::call('config:cache');
+        Artisan::call('view:clear');
+        Artisan::call('route:clear');
+    
+        return "Cache cleared!";
+    });
